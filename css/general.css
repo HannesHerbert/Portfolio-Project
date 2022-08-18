@@ -1,0 +1,218 @@
+/* -----------------------font-imports--------------------------- */
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url(../fonts/Bebas_Neue/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-Black';
+    src: url(../fonts/Roboto/Roboto-Black.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url(../fonts/Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-LightItalic';
+    src: url(../fonts/Roboto/Roboto-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Bright Tropical';
+    src: url(/fonts/Bright-Tropical/Bright-Tropical.otf);
+}
+
+/* --------------small reset & basic document properties---------- */
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* ------------------header & menu-properties----------------------- */
+
+#main-header {
+    height: 50px;
+    margin-top: 2rem;
+    background-color: #13687f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 192px 136px rgba(26, 43, 59, 0.23),
+        0 70px 50px rgba(26, 43, 59, 0.16),
+        0 34px 24px rgba(26, 43, 59, 0.13),
+        0 17px 12px rgba(26, 43, 59, 0.1),
+        0 7px 5px rgba(26, 43, 59, 0.07);
+    opacity: 0;
+    animation: appear 0.5s ease-in-out 1 forwards;
+    position: sticky;
+    top: 2rem;
+    z-index: 4;
+}
+
+#home-btn {
+    margin-left: 2rem;
+}
+
+#home-btn>a {
+    font-size: max(6vw, 4rem);
+    font-family: 'Bright Tropical';
+    text-decoration: none;
+    color: #fff;
+    text-shadow: -1px -1px 0 #000,
+        3px -1px 0 #000,
+        -1px 1px 0 #000,
+        3px 3px 0 #000;
+    font-style: italic;
+    /* letter-spacing: -1.7rem; */
+}
+
+#main-header>nav>ul {
+    list-style: none;
+    display: flex;
+}
+
+.top-menu {
+    margin: 0 2rem;
+    transition: all 0.3s;
+    color: #fff;
+}
+
+.menu-active {
+    transform: scale(1.3) rotateZ(-3deg);
+    color: lightgray;
+}
+
+.top-menu>a {
+    font-size: max(1vw, 3rem);
+    font-family: Bebas Neue;
+    text-decoration: none;
+    color: inherit;
+    text-shadow: -1px -1px 0 #000,
+        3px -1px 0 #000,
+        -1px 1px 0 #000,
+        3px 3px 0 #000;
+}
+
+.top-menu:hover {
+    transform: scale(1.3) rotateZ(-3deg);
+    transition: all 0.3s;
+}
+
+/* -------------------heading-settings----------------- */
+
+#heading {
+    width: fit-content;
+    margin: 4rem auto;
+}
+
+#heading>h2 {
+    font-family: Roboto-Light;
+    font-size: 3rem;
+    font-style: italic;
+}
+
+#heading>h2:nth-child(1) {
+    transform: translateX(200%);
+    animation: slide-rtl 1s cubic-bezier(0.46, 0.03, 0.86, 1.52) 0.5s 1 forwards;
+}
+
+#heading>h2:nth-child(2) {
+    padding-left: 8rem;
+    animation: slide-ltr 1s cubic-bezier(0.46, 0.03, 0.86, 1.52) 0.5s 1 forwards;
+    transform: translateX(-200%);
+}
+
+h3 {
+    font-size: 4rem;
+    font-family: Bebas Neue;
+}
+
+/* ----------------animated classes & keyframes---------------- */
+
+.sep-bar {
+    height: 90%;
+    width: 0.5rem;
+    background-color: #000;
+    margin: 0 1rem;
+}
+
+.bar-animated {
+    animation: reveal 0.5s ease-in 2s 1 forwards;
+    clip-path: inset(0 0 100% 0);
+}
+
+.slide {
+    transform: translateX(100%);
+    animation: slide-rtl 2s ease-in-out .5s 1 forwards;
+}
+
+
+@keyframes slide-rtl {
+    0% {
+        transform: translateX(200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-ltr {
+    0% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        clip-path: inset(0 0 100% 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes wobble {
+    0% {
+        transform: rotate3d(0, 1, 0, -20deg);
+    }
+    50% {
+        transform: rotate3d(0, 1, 0, -22deg) translateY(10px);
+    }
+    100% {
+        transform: rotate3d(0, 1, 0, -20deg);
+    }
+}
