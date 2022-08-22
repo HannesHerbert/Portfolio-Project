@@ -67,6 +67,12 @@ body {
     z-index: 4;
 }
 
+#main-header>nav {
+    margin: 0 2rem;
+}
+
+
+
 #home-btn {
     margin-left: 2rem;
 }
@@ -84,7 +90,7 @@ body {
     /* letter-spacing: -1.7rem; */
 }
 
-#main-header>nav>ul {
+#burgermenu>ul {
     list-style: none;
     display: flex;
 }
@@ -95,7 +101,7 @@ body {
     color: #fff;
 }
 
-.menu-active {
+.top-menu-active {
     transform: scale(1.3) rotateZ(-3deg);
     color: lightgray;
 }
@@ -116,6 +122,24 @@ body {
     transition: all 0.3s;
 }
 
+
+
+.menu-bar {
+    width: 30px;
+    height: 6px;
+    background-color: #fff;
+    border: 1px solid black;
+    display: none;
+    box-shadow: -1px -1px 0 #000,
+        3px -1px 0 #000,
+        -1px 1px 0 #000,
+        3px 3px 0 #000;
+}
+
+.menu-bar:not(:last-of-type) {
+    margin-bottom: 6px;
+}
+
 /* -------------------heading-settings----------------- */
 
 #heading {
@@ -131,18 +155,54 @@ body {
 
 #heading>h2:nth-child(1) {
     transform: translateX(200%);
-    animation: slide-rtl 1s cubic-bezier(0.46, 0.03, 0.86, 1.52) 0.5s 1 forwards;
+    animation: slide-rtl 1s ease-in-out 0.5s 1 forwards;
 }
 
 #heading>h2:nth-child(2) {
     padding-left: 8rem;
-    animation: slide-ltr 1s cubic-bezier(0.46, 0.03, 0.86, 1.52) 0.5s 1 forwards;
+    animation: slide-ltr 1s ease-in-out 0.5s 1 forwards;
     transform: translateX(-200%);
 }
 
 h3 {
     font-size: 4rem;
     font-family: Bebas Neue;
+    margin: 1rem 0;
+}
+
+/* -----------------------button styles------------------------- */
+
+#button {
+    width: fit-content;
+    padding: 1rem;
+    background-color: #fff;
+    font-size: 1.5rem;
+    font-family: Roboto-Light;
+    border-radius: 0.5rem;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 2rem;
+    transition: all 0.2s;
+}
+
+#button-arrow {
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#button:hover {
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
 /* ----------------animated classes & keyframes---------------- */
@@ -209,10 +269,109 @@ h3 {
     0% {
         transform: rotate3d(0, 1, 0, -20deg);
     }
+
     50% {
         transform: rotate3d(0, 1, 0, -22deg) translateY(10px);
     }
+
     100% {
         transform: rotate3d(0, 1, 0, -20deg);
+    }
+}
+
+/* -----------------footer-style------------------- */
+footer {
+    width: 100%;
+    height: 20vh;
+    margin-top: 5vh;
+    background-color: #13687f;
+}
+
+footer>nav {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(3% 0, 97% 0, 90% 90%, 10% 90%);
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: 'Roboto-Black';
+}
+
+footer>nav ul {
+    list-style: none;
+    display: flex;
+    margin: 1rem 0;
+}
+
+.footer-menu>a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-menu:not(:last-of-type)::after {
+    content: "::";
+    margin: 0 2rem;
+    color: #fff;
+}
+
+footer>nav p {
+    color: gray;
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+.footer-menu-active>a {
+    border-bottom: 1px solid #fff;
+}
+
+/* -----------------------media querries--------------------- */
+
+@media screen and (max-width: 950px) {
+    #burgermenu>ul {
+        display: none;
+    }
+
+    .menu-bar {
+        display: block;
+    }
+
+    #burgermenu:hover>ul {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(245, 245, 245, 0.9);
+        position: relative;
+        top: 150px;
+        left: 2rem;
+    }
+
+    #burgermenu:hover>ul>li {
+        margin: 1rem 0;
+        padding: 0 2rem;
+    }
+
+    #heading>h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #heading>h2 {
+        font-size: 2rem;
+    }
+    footer>nav {
+        font-size: 0.8rem;
+    }
+    .footer-menu:not(:last-of-type)::after {
+        margin: 0 0.3rem;
+    }
+    footer>nav p {
+        font-size: 0.5rem;
+    }
+    #heading>h2:nth-child(2) {
+        padding-left: 0;
     }
 }

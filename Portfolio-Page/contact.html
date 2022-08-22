@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <meta name="author" content="Hannes Petri">
     <meta name="description" content="Services I offer">
-    
+
     <title>Hannes Petri - Service</title>
 
-    <link rel="stylesheet" href="css/references-style.css">
+    <link rel="stylesheet" href="css/contact-style.css">
 
     <link rel="stylesheet" href="css/general.css">
 
@@ -19,7 +20,7 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    </head>
+</head>
 
 <body>
 
@@ -30,18 +31,120 @@
         </div>
 
         <nav>
-            <ul>
-                <li class="top-menu"><a href="/service.html">Service</a></li>
-                <li class="top-menu"><a href="/references.html">References</a></li>
-                <li class="top-menu"><a href="/about-me.html">About me</a></li>
-                <li class="top-menu menu-active"><a href="/contact.html">Contact</a></li>
-            </ul>
+            <div id="burgermenu">
+                <div class="menu-bar"></div>
+                <div class="menu-bar"></div>
+                <div class="menu-bar"></div>
+                <ul>
+                    <li class="top-menu"><a href="/service.html">Service</a></li>
+                    <li class="top-menu"><a href="/references.html">References</a></li>
+                    <li class="top-menu"><a href="/about-me.html">About me</a></li>
+                    <li class="top-menu top-menu-active"><a href="/contact.html">Contact</a></li>
+                    <li class="top-menu"><a href="https://github.com/HannesHerbert/Portfolio-Project" target="_blank"
+                            rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <main></main>
+    <main>
 
-    <footer></footer>
+        <div id="heading">
+            <h2>Web Designer & Developer based in Leipzig, Germany.</h2>
+            <h2>Experienced in designing and developing custom websites.</h2>
+        </div>
+
+        <section class="slide">
+
+            <div id="left-side-content">
+                <div id="question">
+                    <p>Have a question? Please fill out the form.</p>
+                    <p>Or write me an eMail at:</p>
+                    <p>hannespetri89@gmail.com</p>
+                </div>
+                <div id="reachability">
+                    <img src="/img/Leipzig-500px.jpeg" alt="Leipzig skyline">
+                    <h4>- Get in touch -</h4>
+                    <p>Office hours are 9am to5pm on weekdays.</p>
+                    <p>I'm based in Leipzig, Saxony, Germany</p>
+                </div>
+            </div>
+
+            <div class="sep-bar bar-animated"></div>
+
+            <form>
+
+                <fieldset id="fieldset-personal-data">
+
+                    <legend>Personal Data</legend>
+
+                    <label for="txt-input-first-name">First Name</label>
+                    <input type="txt" id="text-input-first-name" required placeholder="Max">
+
+                    <label for="txt-input-last-name">Last Name</label>
+                    <input type="text" id="txt-input-last-name" required placeholder="Mustermann">
+
+                    <label for="tel-input-phone">Phone</label>
+                    <input type="tel" pattern="[0-9]{3,6}\/[0-9]{3,10}" id="txt-input-phone" required
+                        placeholder="1234/567890">
+
+                    <label for="email-input-email">E-mail *</label>
+                    <input type="email" id="email-input-email" placeholder="max@mustermann.de">
+
+                    <label for="text-input-webadress">Website</label>
+                    <input type="website" id="text-input-webadress" placeholder="www.webspace.com">
+
+                    <label for="textarea-message">Message</label>
+                    <textarea id="textarea-comments" cols="30" rows="10" placeholder="Your message here"></textarea>
+
+                    <label for="privacy-consent">Privacy *</label>
+                    <div>By using this form you agree with the storage and handling of your data by this website. Please
+                        read our <a href="">Privacy Policy</a> for more information on how we handle your data.</div>
+                    <div id="privacy-consent">
+                        <input type="checkbox" id="checkbox-input-privacy">
+                        <label for="checkbox-input-privacy">I agree</label>
+                    </div>
+
+                    <div id="button-wrapper">
+                        <div id="button" href="/contact.html">
+                            <div>Send</div>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+            </form>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+
+        <nav>
+
+            <ul>
+                <li class="footer-menu"><a href="/index.html">Home</a></li>
+                <li class="footer-menu"><a href="/service.html">Service</a></li>
+                <li class="footer-menu"><a href="/references.html">References</a></li>
+                <li class="footer-menu"><a href="/about-me.html">About me</a></li>
+                <li class="footer-menu footer-menu-active"><a href="/contact.html">Contact</a></li>
+                <li class="footer-menu"><a href="https://github.com/HannesHerbert/Portfolio-Project" target="_blank"
+                        rel="noopener noreferrer">Github</a></li>
+            </ul>
+
+            <ul>
+                <li class="footer-menu"><a href="">Privacy Policy</a></li>
+                <li class="footer-menu"><a href="">Cookie Policy</a></li>
+                <li class="footer-menu"><a href="">Terms & Conditions</a></li>
+            </ul>
+
+            <p>Copyright © 2022 Hannes Petri • Leipzig based Web Designer & Developer</p>
+
+        </nav>
+
+    </footer>
 
 </body>
 
