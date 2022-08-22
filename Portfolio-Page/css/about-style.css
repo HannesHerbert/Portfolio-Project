@@ -25,6 +25,7 @@ main>section {
 #portrait>img {
     width: 100%;
     filter: grayscale(1);
+    transition: all 0.2s;
 }
 
 #portrait>img:hover {
@@ -33,7 +34,7 @@ main>section {
     transition: all 0.2s;
 }
 
-.about-text {
+#about-text {
     width: 50%;
     margin-right: 2rem;
     font-size: max(1.2vw, 1rem);
@@ -41,5 +42,13 @@ main>section {
     font-weight: 100;
 }
 
+#about-text>p {
+    margin-bottom: 1rem;
+}
 
+#about-text>ul {
+    margin: 2rem 0 0 4rem;
+}
+
+/* -------------------special media querries---------------- */
 

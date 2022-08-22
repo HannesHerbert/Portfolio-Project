@@ -47,21 +47,20 @@ main>section {
     transform-style: preserve-3d;
 }
 
-#references-wrapper>div {
+.references-cards {
     width: 20vw;
     height: 15vw;
     position: absolute;
     border: 1px solid black;
     background-color: #13687f;
     border-radius: 1rem;
-    /* z-index: calc((var(--i) * -2) + 2); */
-    transform: translateZ(calc(var(--i) * -30px)) translateY(calc(var(--i) * -15px)) translateX(calc(var(--i) * 80px));
+    transform: translateZ(calc(var(--i) * -0.1vw)) translateY(calc(var(--i) * -15px)) translateX(calc(var(--i) * 80px));
     transition: all 0.5s ease-in-out 0.2s;
     animation: appear 1s ease-in-out 2.5s 1 forwards;
     opacity: 0;
 }
 
-#references-wrapper>div:after {
+.references-cards:after {
     content: "";
     height: 10px;
     width: inherit;

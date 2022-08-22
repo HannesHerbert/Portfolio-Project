@@ -122,8 +122,6 @@ body {
     transition: all 0.3s;
 }
 
-
-
 .menu-bar {
     width: 30px;
     height: 6px;
@@ -328,7 +326,7 @@ footer>nav p {
     border-bottom: 1px solid #fff;
 }
 
-/* -----------------------media querries--------------------- */
+/* -----------------------media queries--------------------- */
 
 @media screen and (max-width: 950px) {
     #burgermenu>ul {

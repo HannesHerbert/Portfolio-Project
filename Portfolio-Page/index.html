@@ -16,44 +16,60 @@
 
     <link rel="stylesheet" href="css/general.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
-<body>
+<body id="body-index">
 
     <header>
 
         <nav>
-            <ul>
-                <li><a href="/service.html">Service</a></li>
-                <li><a href="/references.html">References</a></li>
-                <li><a href="/about-me.html">About me</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
+            <div id="burgermenu-index">
+                <div id="menu-bar-index-wrapper">
+                    <div class="menu-bar-index"></div>
+                    <div class="menu-bar-index"></div>
+                    <div class="menu-bar-index"></div>
+                </div>
+
+                <ul>
+                    <li class="top-menu-index"><a href="/service.html">Services</a></li>
+                    <li class="top-menu-index"><a href="/references.html">References</a></li>
+                    <li class="top-menu-index"><a href="/about-me.html">About me</a></li>
+                    <li class="top-menu-index"><a href="/contact.html">Contact</a></li>
+                    <li class="top-menu-index"><a href="https://github.com/HannesHerbert/Portfolio-Project"
+                            target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+            </div>
         </nav>
 
-
-        <div id="portrait">
-            <img src="/img/me.jpg" alt="me with a quarry in the background">
-        </div>
-
-
-        <div id="sep-bar"></div>
-
-        <div id="welcome">
-
-            <h1>Hi, I'm <br> Hannes Pet<span id="highlighted-letter">r</span>i!</h1>
-            <p>Webdeveloper & Webdesigner from Leipzig, Germany.</p>
-            <p>I build your individual webspace and create a user experience that is both exciting and functional.</p>
-
-
-        </div>
-
-
-
-
-
-
     </header>
+
+    <main>
+
+        <section>
+
+            <div id="welcome-grid">
+
+                <div id="portrait">
+                    <img src="/img/me.jpg" alt="me with a quarry in the background">
+                </div>
+
+                <div class="sep-bar bar-animated"></div>
+
+                <h1>Hi, I'm <br> Hannes Pet<span id="highlighted-letter">r</span>i!</h1>
+
+                <p>Web developer & designer from Leipzig, Germany.</p>
+
+                <p>I build your individual webspace and create a user experience that is both exciting and functional.</p>
+
+            </div>
+
+        </section>
+
+    </main>
 
 </body>
 

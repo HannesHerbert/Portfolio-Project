@@ -66,16 +66,28 @@ h3 {
 .responsiveness-img>div:nth-child(1) {
     grid-row: 1;
     grid-column: 1 / 4;
+    background-image: url(../img/smartphone-tablet-pc.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .responsiveness-img>div:nth-child(2) {
     grid-row: 2 / 4;
     grid-column: 1;
+    background-image: url(../img/os.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .responsiveness-img>div:nth-child(3) {
     grid-row: 2 / 4;
     grid-column: 2 / 4;
+    background-image: url(../img/macintosh.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
 }
 
 

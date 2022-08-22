@@ -25,7 +25,6 @@ section {
 
 #question {
     height: 12vh;
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,4 +123,26 @@ textarea {
 
 #button>div {
     margin: 0 2rem;
+}
+
+/* --------------special media queries---------------- */
+
+@media screen and (max-width: 950px) {
+    section {
+        margin: 5vh 0 0 5vw;
+    }
+    #reachability>img {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        margin: 5vh 0 0 5vw;
+        flex-direction: column;
+        height: fit-content;
+    }
+    #reachability {
+        margin: 2rem 0;
+    }
 }
